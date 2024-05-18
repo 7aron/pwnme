@@ -6,6 +6,31 @@ import { DEFAULT } from "./commands/default";
 import { PROJECTS } from "./commands/projects";
 import { createWhoami } from "./commands/whoami";
 
+const BOOKS = [
+  "The Hacker Playbook [1,2,3] by Peter Kim",
+  "The Pentester's Blueprint by Phillip L. Wylie and Kim Crawley",
+  "Social Engineering: The Art of Human Hacking by Christopher Hadnagy",
+  "The Art of Invisibility by Kevin Mitnick",
+  "Black Hat Python by Justin Seitz",
+  "Metasploit: The Penetration Tester's Guide by David Kennedy",
+  "Practical Malware Analysis by Michael Sikorski",
+  "Advanced Penetration Testing by Wil Allsopp",
+  "Web Application Hacker's Handbook by Dafydd Stuttard",
+  "Penetration Testing: A Hands-On Introduction to Hacking by Georgia Weidman",
+];
+
+// Function to handle the 'books' command
+function listBooks() {
+  const booksMessage = ["Here are some books about penetration testing you might like:", "<br>"];
+  BOOKS.forEach((book) => {
+    booksMessage.push(`<span class='command'>${book}</span>`);
+  });
+  booksMessage.push("<br>");
+  booksMessage.push(`${BOOKS.length} Book(s)`);
+  booksMessage.push("<br>");
+  writeLines(booksMessage);
+}
+
 //mutWriteLines gets deleted and reassigned
 let mutWriteLines = document.getElementById("write-lines");
 let historyIdx = 0
@@ -28,10 +53,9 @@ const PRE_USER = document.getElementById("pre-user");
 const HOST = document.getElementById("host");
 const USER = document.getElementById("user");
 const PROMPT = document.getElementById("prompt");
-const COMMANDS = ["me", "help", "about", "projects", "whoami", "banner", "clear"];
+const COMMANDS = ["me", "help", "about", "projects", "whoami", "banner", "books", "clear"];
 const HISTORY : string[] = [];
 const SUDO_PASSWORD = command.password;
-
 
 const scrollToBottom = () => {
   const MAIN = document.getElementById("main");
@@ -107,7 +131,7 @@ function enterKey() {
   */
   if (userInput.trim().length !== 0) {
       commandHandler(userInput.toLowerCase().trim());
-    }
+  }
   
   USERINPUT.value = resetInput;
   userInput = resetInput; 
@@ -191,7 +215,7 @@ function commandHandler(input : string) {
       break;
     case 'banner':
       if(bareMode) {
-        writeLines(["WebShell v6.0.9", "<br>"])
+        writeLines(["RootMe v6.0.9", "<br>"])
         break;
       }
       writeLines(BANNER);
@@ -223,6 +247,9 @@ function commandHandler(input : string) {
         break;
       }
       writeLines(PROJECTS);
+      break;
+    case 'books':
+      listBooks();
       break;
     case 'rm -rf':
       if (bareMode) {
@@ -274,6 +301,8 @@ function commandHandler(input : string) {
       break;
   }  
 }
+
+
 
 function writeLines(message : string[]) {
   message.forEach((item, idx) => {
@@ -371,7 +400,7 @@ const initEventListeners = () => {
     PRE_USER.innerText = command.username;
   } 
 
-    window.addEventListener('load', () => {
+  window.addEventListener('load', () => {
     writeLines(BANNER);
   });
   

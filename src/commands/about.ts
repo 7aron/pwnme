@@ -1,8 +1,7 @@
 import command from '../../config.json' assert {type: 'json'};
 
-const createAbout = () : string[] => {
-  const about : string[] = [];
-
+const createAbout = (): string[] => {
+  const about: string[] = [];
   const SPACE = "&nbsp;";
 
   const EMAIL = "Email";
@@ -15,7 +14,8 @@ const createAbout = () : string[] => {
   let string = "";
 
   about.push("<br>");
-  about.push(command.aboutGreeting);
+  const aboutGreeting = command.aboutGreeting.split('\n').join('<br>');
+  about.push(aboutGreeting);
   about.push("<br>");
   string += SPACE.repeat(2);
   string += email;
@@ -38,7 +38,7 @@ const createAbout = () : string[] => {
   about.push(string);
 
   about.push("<br>");
-  return about
+  return about;
 }
 
 export const ABOUT = createAbout();

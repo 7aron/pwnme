@@ -18,7 +18,7 @@ const createBanner = () : string[] => {
     banner.push(eleToPush);
   });  
   banner.push("<br>");
-  banner.push("Welcome to WebShell v6.0.9");
+  banner.push("Welcome to RootMe v6.0.9");
   banner.push("Type <span class='command'>'help'</span> for a list of all available commands.");
   banner.push("<br>");
   return banner;

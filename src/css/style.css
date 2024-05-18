@@ -10,6 +10,11 @@
   --prompt-1: #FE6BC9;
   --prompt-2: #70FDFF;
 }
+.book-title {
+  color: green; /* You can choose any color you prefer */
+}
+
+
 
 @keyframes typing {
   from {

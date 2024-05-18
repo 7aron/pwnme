@@ -1,0 +1,53 @@
+{
+  "ascii": [
+    "███╗   ███╗ ██████╗ ██╗   ██╗███╗   ██╗ █████╗ ████████╗████████╗██╗  ██╗",
+    "████╗ ████║██╔═══██╗██║   ██║████╗  ██║██╔══██╗╚══██╔══╝╚══██╔══╝██║  ██║",
+    "██╔████╔██║██║   ██║██║   ██║██╔██╗ ██║███████║   ██║      ██║   ███████║",
+    "██║╚██╔╝██║██║   ██║██║   ██║██║╚██╗██║██╔══██║   ██║      ██║   ██╔══██║",
+    "██║ ╚═╝ ██║╚██████╔╝╚██████╔╝██║ ╚████║██║  ██║   ██║      ██║   ██║  ██║",
+    "╚═╝     ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═╝  ╚═╝"
+  ],
+  "title": "Mounatth",
+  "username": "www-data",
+  "hostname": "mounatth",
+  "password": "25082000",
+  "social": {
+    "email": "root@mounatth.info",
+    "github": "mounatth",
+    "linkedin": "taron-nersisyan-60727b258"
+  },
+  "aboutGreeting": "Hi stranger. Welcome to my world. There is a CTF for you. PASSWD is my birthday. ",
+  "projects": [
+    [
+      "Hack the SYSTEM",
+      "Do you really think it's this easy?"
+    ],
+    [
+      "PASSWD",
+      "DDMMYYYY"
+    ]
+  ],
+  "colors": {
+    "background": "#0C0623",
+    "foreground": "#F8DDE5",
+    "banner": "#FF9951",
+    "border": {
+      "visible": true,
+      "color": "#FFADE2"
+    },
+    "prompt": {
+      "default": "#A5A7A7",
+      "user": "#FE6BC9",
+      "host": "#70FDFF",
+      "input": "#FF7685"
+    },
+    "link": {
+      "text": "#B6AAEE",
+      "highlightColor": "#FFADE2",
+      "highlightText": "#0C0623"
+    },
+    "commands": {
+      "textColor": "#FD9BDB"
+    }
+  }
+}

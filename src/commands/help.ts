@@ -19,6 +19,10 @@ const helpObj = {
       "Display the banner."
     ],
     [
+      "'books'",
+      "Highly recommended to read."
+    ],
+    [
       "'clear'",
       "Clear the terminal."
     ]

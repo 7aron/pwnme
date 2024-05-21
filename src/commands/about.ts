@@ -7,16 +7,20 @@ const createAbout = (): string[] => {
   const EMAIL = "Email";
   const GITHUB = "Instagram";
   const LINKEDIN = "Linkedin";
-  
+  const TRYHACKME = "TryHackMe";  
+
   const email = `<i class='fa-solid fa-envelope'></i> ${EMAIL}`;   
   const github = `<i class='fa-brands fa-instagram'></i> ${GITHUB}`;
   const linkedin = `<i class='fa-brands fa-linkedin'></i> ${LINKEDIN}`;
+  const tryhackme = `<i class='fa-brands fa-hackerrank'></i> ${TRYHACKME}`;  // Added icon for TryHackMe
+
   let string = "";
 
   about.push("<br>");
   const aboutGreeting = command.aboutGreeting.split('\n').join('<br>');
   about.push(aboutGreeting);
   about.push("<br>");
+
   string += SPACE.repeat(2);
   string += email;
   string += SPACE.repeat(17 - EMAIL.length);
@@ -35,6 +39,14 @@ const createAbout = (): string[] => {
   string += linkedin;
   string += SPACE.repeat(17 - LINKEDIN.length);  
   string += `<a target='_blank' href='https://www.linkedin.com/in/${command.social.linkedin}'>linkedin/${command.social.linkedin}</a>`;
+  about.push(string);
+
+  // Adding TryHackMe link section
+  string = '';
+  string += SPACE.repeat(2);
+  string += tryhackme;
+  string += SPACE.repeat(17 - TRYHACKME.length);  
+  string += `<a target='_blank' href='https://tryhackme.com/p/Mounatth/'>TryHackMe Profile</a>`;  // Replace 'INSERT_TRYHACKME_LINK_HERE' with your actual link
   about.push(string);
 
   about.push("<br>");

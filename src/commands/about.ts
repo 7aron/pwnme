@@ -46,7 +46,7 @@ const createAbout = (): string[] => {
   string += SPACE.repeat(2);
   string += tryhackme;
   string += SPACE.repeat(17 - TRYHACKME.length);  
-  string += `<a target='_blank' href='https://tryhackme.com/p/Mounatth/'>TryHackMe Profile</a>`;  // Replace 'INSERT_TRYHACKME_LINK_HERE' with your actual link
+  string += `<a target='_blank' href='https://tryhackme.com/p/Mounatth/'>Mounatth</a>`;  
   about.push(string);
 
   about.push("<br>");

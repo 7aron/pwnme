@@ -249,8 +249,9 @@ function commandHandler(input : string) {
       writeLines(PROJECTS);
       break;
     case 'books':
-      listBooks();
-      break;
+      if(bareMode) {
+        writeLines(["Nothing to see here.", "<br>"])
+        break;
     case 'rm -rf':
       if (bareMode) {
         writeLines(["don't try again.", "<br>"])

@@ -41,7 +41,6 @@ const createAbout = (): string[] => {
   string += `<a target='_blank' href='https://www.linkedin.com/in/${command.social.linkedin}'>linkedin/${command.social.linkedin}</a>`;
   about.push(string);
 
-  // Adding TryHackMe link section
   string = '';
   string += SPACE.repeat(2);
   string += tryhackme;

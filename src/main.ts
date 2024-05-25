@@ -8,6 +8,7 @@ import { createWhoami } from "./commands/whoami";
 import { RESOURCES } from "./commands/resources";
 import { TOOLS } from "./commands/tools";
 import { getLocation } from "./commands/location";
+import { EQUIPMENT } from './commands/equipment';
 
 const BOOKS = [
   "The Hacker Playbook [1,2,3] by Peter Kim",
@@ -56,7 +57,7 @@ const PRE_USER = document.getElementById("pre-user");
 const HOST = document.getElementById("host");
 const USER = document.getElementById("user");
 const PROMPT = document.getElementById("prompt");
-const COMMANDS = ["me", "help", "about", "projects", "whoami", "banner", "books", "resources", "tools", "location", "clear"];
+const COMMANDS = ["me", "help", "about", "projects", "whoami", "banner", "books", "resources", "tools", "location", "equipment", "clear"];
 const HISTORY : string[] = [];
 const SUDO_PASSWORD = command.password;
 
@@ -279,7 +280,14 @@ function commandHandler(input : string) {
         break;
         }
       getLocation(writeLines)
-      break;    
+      break;
+     case 'equipment':
+    if (bareMode) {
+      writeLines(["You don't need to know about these gadgets.", "<br>"]);
+      break;
+    }
+    writeLines(EQUIPMENT);
+    break;      
     case 'cat':
       if(bareMode) {
         writeLines(["Usage: cat [file]", "<br>"])
@@ -367,6 +375,7 @@ function commandHandler(input : string) {
             "<li>find</li>",
             "<li>books</li>",
             "<li>resources</li>",
+            "<li>equipment</li>",
             "<li>banner</li>",
             "<li>cat</li>",
             "<li>clear</li>",

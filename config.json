@@ -10,13 +10,13 @@
   "title": "Mounatth",
   "username": "www-data",
   "hostname": "mounatth",
-  "password": "Gexamik",
+  "password": "gexamik",
   "social": {
     "email": "root@mounatth.info",
     "github": "mounatth",
     "linkedin": "taron-nersisyan"
   },
-  "aboutGreeting": "Hi stranger. Welcome to my webshell.\nPenetration Tester | Red Teamer | CTF Player | Bug Hunter\n00000000  55 6a 49 35 63 31 70 70 51 6b 5a 5a 4d 6d 68 32\n00000010  53 55 5a 6e 64 47 4e 74 52 6a 56 4a 52 55 5a 7a\n00000020  57 6d 31 46 5a 31 52 58 62 48 4a 61 55 30 4a 4b\n00000030  59 6d 31 53 63 46 6c 54 51 6b 78 68 56 33 68 32\n00000040  53 55 45 39 50 51 3d 3d",
+  "aboutGreeting": "Hi stranger. Welcome to my webshell.\nPenetration Tester | Red Teamer | CTF Player | Bug Hunter\n\n00000000  55 6a 49 35 63 31 70 70 51 6b 5a 5a 4d 6d 68 32\n00000010  53 55 5a 6e 64 47 4e 74 52 6a 56 4a 52 55 5a 7a\n00000020  57 6d 31 46 5a 31 52 58 62 48 4a 61 55 30 4a 4b\n00000030  59 6d 31 53 63 46 6c 54 51 6b 78 68 56 33 68 32\n00000040  53 55 45 39 50 51 3d 3d",
   "projects": [
     [
       "Hack the SYSTEM",
@@ -24,7 +24,7 @@
     ],
     [
       "PASSWD",
-      "DDMMYYYY"
+      "Two different ways"
     ]
   ],
   "colors": {

@@ -23,6 +23,18 @@ const helpObj = {
       "Highly recommended to read."
     ],
     [
+      "'resources'",
+      "Useful for pentest"
+    ],
+    [
+      "'tools'",
+      "Your arsenal"
+    ],
+    [
+      "'location'",
+      "Display your location"
+    ],
+    [
       "'clear'",
       "Clear the terminal."
     ]

@@ -5,6 +5,9 @@ import { ABOUT } from "./commands/about"
 import { DEFAULT } from "./commands/default";
 import { PROJECTS } from "./commands/projects";
 import { createWhoami } from "./commands/whoami";
+import { RESOURCES } from "./commands/resources";
+import { TOOLS } from "./commands/tools";
+import { getLocation } from "./commands/location";
 
 const BOOKS = [
   "The Hacker Playbook [1,2,3] by Peter Kim",
@@ -53,7 +56,7 @@ const PRE_USER = document.getElementById("pre-user");
 const HOST = document.getElementById("host");
 const USER = document.getElementById("user");
 const PROMPT = document.getElementById("prompt");
-const COMMANDS = ["me", "help", "about", "projects", "whoami", "banner", "books", "clear"];
+const COMMANDS = ["me", "help", "about", "projects", "whoami", "banner", "books", "resources", "tools", "location", "clear"];
 const HISTORY : string[] = [];
 const SUDO_PASSWORD = command.password;
 
@@ -245,12 +248,85 @@ function commandHandler(input : string) {
       if(bareMode) {
         writeLines(["I don't want you to break the other projects.", "<br>"])
         break;
-      }
+      } 
       writeLines(PROJECTS);
       break;
     case 'books':
+      if(bareMode) {
+        writeLines(["You dont deserve it.", "<br>"])
+        break;
+        }
+      listBooks()
+      break;  
+    case 'resources':
+      if(bareMode) {
+        writeLines(["I could tell you, but you tried to hack me.", "<br>"])
+        break;
+        }
+      writeLines(RESOURCES)
+      break;  
+    case 'tools':
+      if(bareMode) {
+        writeLines(["No more tools, nothing! You are bad GUY!.", "<br>"])
+        break;
+        }
+      writeLines(TOOLS)
+      break; 
+    case 'location':
+      if(bareMode) {
+        writeLines(["Now I know your location!", "<br>"])
+        getLocation(writeLines)
+        break;
+        }
+      getLocation(writeLines)
+      break;    
+    case 'cat':
+      if(bareMode) {
+        writeLines(["Usage: cat [file]", "<br>"])
+        break;
+        }
+      writeLines(["NOT HERE","<br>"])
+      break;   
+    case 'cat flag.txt':
+      if(bareMode) {
+        writeLines(["aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1rSWVfcUJleVpTWQ==", "<br>"])
+        break;
+        }
+      writeLines(["You will not find it HERE!", "<br>"]) 
+      break; 
+    case 'find':
+      if(bareMode){
+        writeLines(["Usage: find / -type -perm -user", "<br>"])
+        writeLines(["<br>"])
+        writeLines(["Don't forget to redirect error messages", "<br>"])
+        break;
+      }
+      writeLines(["This is a very useful command but again, not HERE!", "<br>"]) 
+      break; 
+
+    case 'find / -type f -perm /4000 -user root -ls 2>/dev/null':
+      if(bareMode){
+        writeLines(["Congrats! I know this part was a little bit hard:", "<br>"])
+        writeLines(["Sorry, Not Sorry!", "<br>"])
+        writeLines(["<br>"])
+        writeLines(["MNT{AKCKBAKI_BEPAPUDAKI_IKCKBAKI_BEPADUDAKI_JUPA_JUPA_JUPAPAJUPA}", "<br>"])
+        break;
+      }
+      writeLines(["You will not find it HERE!", "<br>"]) 
+      break;                            
+    case 'books':
       listBooks();
       break;
+    case 'resources':
+      writeLines(RESOURCES);  
+      break; 
+    case 'tools':
+      writeLines(TOOLS);  
+      break;   
+    case 'location':
+      getLocation(writeLines);  
+      break;  
+      
     case 'rm -rf':
       if (bareMode) {
         writeLines(["don't try again.", "<br>"])
@@ -279,11 +355,26 @@ function commandHandler(input : string) {
       }, 100);
 
       break;
-    case 'ls':
-      if(bareMode) {
-        writeLines(["", "<br>"])
-        break;
-      }
+      case 'ls':
+        if (bareMode) {
+          writeLines([
+            "<ul>",
+            "<li>about</li>",
+            "<li>projects</li>",
+            "<li>location</li>",
+            "<li>tools</li>",
+            "<li>flag.txt</li>",
+            "<li>find</li>",
+            "<li>books</li>",
+            "<li>resources</li>",
+            "<li>banner</li>",
+            "<li>cat</li>",
+            "<li>clear</li>",
+            "</ul>",
+            "<br>"
+          ]);
+          break;
+        }
 
       if (isSudo) {
         writeLines(["src", "<br>"]);
@@ -412,7 +503,7 @@ const initEventListeners = () => {
     USERINPUT.focus();
   });
 
-  console.log(`%cPassword: ${command.password}`, "color: red; font-size: 20px;");
+  console.log(`%cThis is easier to decrypt: --. . -..- .- -- .. -.-`, "color: #20C20E; font-size: 10px;");
 }
 
 initEventListeners();

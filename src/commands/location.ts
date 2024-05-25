@@ -26,7 +26,8 @@ async function fetchLocationInfo(): Promise<string[]> {
 export function getLocation(callback: (lines: string[]) => void): void {
   fetchLocationInfo().then(ipInfo => {
     callback(ipInfo);
-  }).catch(error => {
+  }).catch(error => { 
+    console.error('Failed to fetch IP information:', error);
     callback(["<br>", "Failed to fetch IP information.", "<br>"]);
   });
 }

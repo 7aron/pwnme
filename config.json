@@ -19,13 +19,31 @@
   "aboutGreeting": "Hi stranger. Welcome to my webshell.\nPenetration Tester | Red Teamer | CTF Player | Bug Hunter\n\n00000000  55 6a 49 35 63 31 70 70 51 6b 5a 5a 4d 6d 68 32\n00000010  53 55 5a 6e 64 47 4e 74 52 6a 56 4a 52 55 5a 7a\n00000020  57 6d 31 46 5a 31 52 58 62 48 4a 61 55 30 4a 4b\n00000030  59 6d 31 53 63 46 6c 54 51 6b 78 68 56 33 68 32\n00000040  53 55 45 39 50 51 3d 3d",
   "projects": [
     [
+      "Be Clever",
+      "A language school",
+      "https://beclever.am"
+    ],
+    [
       "Hack the SYSTEM",
-      "Do you really think it's this easy?"
+      "Do you really think it's this easy?",
+      "https://example.com/hack-the-system"
     ],
     [
       "PASSWD",
-      "Two different ways"
+      "Two different ways",
+      "https://example.com/passwd"
+    ],
+    [
+      "1915",
+      "Armenian Genocide",
+      "https://1915g.github.io"
+    ],
+    [
+      "Grand Stone",
+      "Buy Stones",
+      "https://grandstone.am"
     ]
+
   ],
   "colors": {
     "background": "#0C0623",

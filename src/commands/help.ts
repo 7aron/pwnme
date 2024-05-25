@@ -31,6 +31,10 @@ const helpObj = {
       "Your arsenal"
     ],
     [
+      "'equipment'",
+      "Some gadgets we like"
+    ],
+    [
       "'location'",
       "Display your location"
     ],

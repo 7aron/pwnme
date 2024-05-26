@@ -312,7 +312,7 @@ function commandHandler(input : string) {
       writeLines(["This is a very useful command but again, not HERE!", "<br>"]) 
       break; 
 
-    case 'find / -type f -perm /4000 -user root -ls 2>/dev/null':
+    case 'find / -type f -perm -4000 -user root -ls 2>/dev/null':
       if(bareMode){
         writeLines(["Congrats! I know this part was a little bit hard:", "<br>"])
         writeLines(["Sorry, Not Sorry!", "<br>"])
